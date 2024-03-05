@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black-color: #2b2a2a;
+    --white-color: #f2f2f2;
+    --primary-color: #5f61e6;
+    --bg-opacity-primary: #5f61e641;
+    --heading-title: #566a7f;
+    --container-bg: #f5f5f9;
+}
+
+
+body{
+     font-family: "Poppins", sans-serif;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color)
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+.bg-primary-main{
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.3s;
+}
+
+.bg-primary-main:hover{
+    background-color: var(--black-color);
+    color: white;
+    transition: 0.3s;
+}
+
+
+.bg-container{
+    background-color: var(--container-bg);
+}
+
+.text-primary-main{
+    color: var(--primary-color);
+}
+
+.label{
+    background-color: var(--bg-opacity-primary);
+    color: var(--primary-color);
+}
+
+.heading-title{
+    color: var(--heading-title);
+}
+
+.bg-main-color {
+    background: rgba(255, 255, 255, 0.453); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(10px); /* Glass effect */
+    transition: background-color 0.3s; /* Smooth transition for the background color */
+    border: 1px solid white;
+}
+
+/* Style for when the navbar is scrolled */
+.bg-main-color.scrolled {
+    background: white; /* Solid white background when scrolled */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+
+.hero-section {
+    height: 600px;
+    color: var(--white-color);
+    background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.overlap-image {
+    width: 100%;
+    max-width: 900px;
+    margin: -10% auto 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    perspective: 1000px; /* Apply perspective to the container */
+    transform-style: preserve-3d; /* Needed for children to preserve 3D position */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.overlap-image img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px;
+    width: 100%; /* Make sure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.features-section {
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+}
+
+.arrow-location{
+position: relative;
+height: 300px;
+}
+
+/* Container holding the navigation buttons */
+.swiper-navigation {
+    display: flex;
+    justify-content: center; /* Center the buttons in the container */
+    align-items: center;
+    margin-top: 50px; /* Adjust based on layout */
+    position: absolute; /* Keep absolute positioning */
+    width: 150px; /* Auto width based on content */
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    background-color: var(--bg-opacity-primary) !important;
+    color: var(--primary-color) !important;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
